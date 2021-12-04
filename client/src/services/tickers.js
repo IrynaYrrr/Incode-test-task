@@ -1,6 +1,6 @@
 import { io } from 'socket.io-client';
 
-class Ticker {
+class Tickers {
     socket = null;
 
     constructor(uri, callback) {
@@ -20,4 +20,4 @@ class Ticker {
     }
 }
 
-export default Ticker;
+export default Tickers;
