@@ -7,4 +7,5 @@ const loadTickers = (tickers) => {
     };
 };
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { LOAD_TICKERS, loadTickers };
