@@ -2,6 +2,7 @@ import * as React from 'react';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import dayjs from 'dayjs';
+import ChangeCell from './ChangeCell';
 
 const TickersTableRow = ({ ticker }) => {
     const getTime = (lastTradeTime) => {
@@ -13,8 +14,8 @@ const TickersTableRow = ({ ticker }) => {
             <TableCell component="th" scope="row">{ticker.ticker}</TableCell>
             <TableCell align="right">{ticker.exchange}</TableCell>
             <TableCell align="right">{ticker.price}</TableCell>
-            <TableCell align="right">{ticker.change}</TableCell>
-            <TableCell align="right">{ticker.change_percent}</TableCell>
+            <TableCell align="right"><ChangeCell change={ticker.change} /></TableCell>
+            <TableCell align="right"><ChangeCell change={ticker.change_percent} /></TableCell>
             <TableCell align="right">{ticker.dividend}</TableCell>
             <TableCell align="right">{ticker.yield}</TableCell>
             <TableCell align="right">{getTime(ticker.last_trade_time)}</TableCell>
